@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 
 public class Tools
 {
-    public static String inputDir = System.getProperty("user.dir") + File.separator+"input" + File.separator;
+    public static String inputDir = System.getProperty("user.dir") + File.separator + "input" + File.separator;
     public static String levelFilePattern = "level$l-$n";
     public static String levelPathPattern = "level$l";
     public static String exampleNumber = "eg";
@@ -18,18 +18,18 @@ public class Tools
 
     public static String[] getLevelInput(int levelNumber) throws java.io.IOException
     {
-       String[] output = new String[lastInputNr];
+        String[] output = new String[firstInputNr == 0 ? lastInputNr + 1 : lastInputNr];
 
-        String dir = inputDir+levelPathPattern.replace("$l", Integer.toString(levelNumber)) + File.separator;
+        String dir = inputDir + levelPathPattern.replace("$l", Integer.toString(levelNumber)) + File.separator;
         String levelFile = levelFilePattern.replace("$l", Integer.toString(levelNumber));
 
-        if(!exampleNumber.equals(""))
-            output[0] = new String(Files.readAllBytes(Paths.get(dir+levelFile.replace("$n", exampleNumber))));
+        if (!exampleNumber.equals(""))
+            output[0] = new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", exampleNumber))));
 
-        for(int i = firstInputNr; i<= lastInputNr; i++)
+        for (int i = firstInputNr; i <= lastInputNr; i++)
         {
             int index = 1;
-            output[index++] = new String(Files.readAllBytes(Paths.get(dir+levelFile.replace("$n", Integer.toString(i)))));
+            output[index++] = new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", Integer.toString(i)))));
         }
 
         return output;
@@ -40,7 +40,7 @@ public class Tools
 
         StringSelection clipboardString = new StringSelection(text);
 
-        Clipboard clipboard  = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(clipboardString,clipboardString);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(clipboardString, clipboardString);
     }
 }
