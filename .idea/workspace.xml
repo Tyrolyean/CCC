@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7ca33c5-91fb-41ce-99dc-f532bbe50aae" name="Default" comment="Added some tools">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/at/htlinn/ccc/Tools.java" />
+    <list default="true" id="a7ca33c5-91fb-41ce-99dc-f532bbe50aae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/at/htlinn/ccc/Main.java" afterPath="$PROJECT_DIR$/src/at/htlinn/ccc/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="Tools.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,12 +180,20 @@
       <option name="presentableId" value="Default" />
       <updated>1507898673199</updated>
       <workItem from="1507898679291" duration="29000" />
-      <workItem from="1508273603700" duration="6075000" />
+      <workItem from="1508273603700" duration="6211000" />
     </task>
+    <task id="LOCAL-00001" summary="Added some tools">
+      <created>1508279719642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1508279719642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6104000" />
+    <option name="totallyTimeSpent" value="6240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -257,8 +263,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
