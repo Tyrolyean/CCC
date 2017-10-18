@@ -22,7 +22,7 @@ public class Tools {
         String dir = inputDir + levelPathPattern.replace("$l", Integer.toString(levelNr)) + File.separator;
         String levelFile = levelFilePattern.replace("$l", Integer.toString(levelNr));
 
-         output.add(exampleNumber.equals("")? "" : new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", exampleNumber)))));
+        output.add(exampleNumber.equals("")? "" : new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", exampleNumber)))));
 
         int i=firstInputNr;
         do
@@ -44,11 +44,11 @@ public class Tools {
         return output;
     }
 
-    public static int[] spitToInt(String s, String separator)
+    public static int[] splitToInt(String s, String separator)
     {
         String[] split = s.split(separator);
         int[] output = new int[split.length];
-        for(int i=0; i<s.length(); i++)
+        for(int i=0; i<split.length; i++)
         {
             output[i] = Integer.parseInt(split[i]);
         }
