@@ -15,11 +15,11 @@ public class Tools {
     public static int firstInputNr = 1;
     public static int lastInputNr = 4;
 
-    public static String[] getLevelInput(int levelNumber) throws java.io.IOException {
+    public static String[] getLevelInput(int levelNr) throws java.io.IOException {
         String[] output = new String[lastInputNr + 1];
 
-        String dir = inputDir + levelPathPattern.replace("$l", Integer.toString(levelNumber)) + File.separator;
-        String levelFile = levelFilePattern.replace("$l", Integer.toString(levelNumber));
+        String dir = inputDir + levelPathPattern.replace("$l", Integer.toString(levelNr)) + File.separator;
+        String levelFile = levelFilePattern.replace("$l", Integer.toString(levelNr));
 
         if (!exampleNumber.equals(""))
             output[0] = new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", exampleNumber))));

@@ -6,9 +6,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        int levelNr = 1;
         String[][] input;
         Scanner sc = new Scanner(System.in);
-        Level l = new Level(1);
+        Level l = new Level(levelNr);
 
         Tools.levelFilePattern = "level$l-$n.txt";
         Tools.levelPathPattern = "level$l";
@@ -17,7 +18,7 @@ public class Main {
         Tools.lastInputNr = 4;
 
         try {
-            input = Tools.split(Tools.unifyEOL(Tools.getLevelInput(1)), "\n");
+            input = Tools.split(Tools.unifyEOL(Tools.getLevelInput(levelNr)), "\n");
         } catch (Exception e) {
             System.out.println("Exception thrown!");
             System.out.println("StackTrace: ");
