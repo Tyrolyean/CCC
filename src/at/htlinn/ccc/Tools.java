@@ -17,7 +17,7 @@ public class Tools {
     //public static int lastInputNr = 4;
 
     public static String[] getLevelInput(int levelNr) throws java.io.IOException {
-        ArrayList<String> output = new ArrayList<String>();
+        ArrayList<String> output = new ArrayList<>();
 
         String dir = inputDir + levelPathPattern.replace("$l", Integer.toString(levelNr)) + File.separator;
         String levelFile = levelFilePattern.replace("$l", Integer.toString(levelNr));
