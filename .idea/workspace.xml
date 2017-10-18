@@ -396,7 +396,7 @@
       <workItem from="1508306675640" duration="166000" />
       <workItem from="1508306859314" duration="2608000" />
       <workItem from="1508313379252" duration="9001000" />
-      <workItem from="1508354447452" duration="2876000" />
+      <workItem from="1508354447452" duration="2907000" />
     </task>
     <task id="LOCAL-00001" summary="Added some tools">
       <created>1508279719642</created>
@@ -426,11 +426,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508333834897</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added and improved some tools">
+      <created>1508359696045</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1508359696045</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37027000" />
+    <option name="totallyTimeSpent" value="37058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -505,7 +512,8 @@
     <MESSAGE value="Added fixed input info file" />
     <MESSAGE value="Extended compatibility" />
     <MESSAGE value="Added some tools and Level structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some tools and Level structure" />
+    <MESSAGE value="Added and improved some tools" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added and improved some tools" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
