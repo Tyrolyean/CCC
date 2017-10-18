@@ -1,11 +1,12 @@
 package at.htlinn.ccc;
 
-import java.awt.*;
+import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
 public class Tools {
     public static String inputDir = System.getProperty("user.dir") + File.separator + "input" + File.separator;
@@ -13,24 +14,25 @@ public class Tools {
     public static String levelPathPattern = "level$l";
     public static String exampleNumber = "eg";
     public static int firstInputNr = 1;
-    public static int lastInputNr = 4;
+    //public static int lastInputNr = 4;
 
     public static String[] getLevelInput(int levelNr) throws java.io.IOException {
-        String[] output = new String[lastInputNr + 1];
+        ArrayList<String> output = new ArrayList<String>();
 
         String dir = inputDir + levelPathPattern.replace("$l", Integer.toString(levelNr)) + File.separator;
         String levelFile = levelFilePattern.replace("$l", Integer.toString(levelNr));
 
-        if (!exampleNumber.equals(""))
-            output[0] = new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", exampleNumber))));
+         output.add(exampleNumber.equals("")? "" : new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", exampleNumber)))));
 
-        int index = 1;
-        for (int i = firstInputNr; i <= lastInputNr; i++) {
-            output[index++] = new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", Integer.toString(i)))));
+        int i=firstInputNr;
+        do
+        {
+            output.add(new String(Files.readAllBytes(Paths.get(dir + levelFile.replace("$n", Integer.toString(i++))))));
         }
+        while (new File(dir + levelFile.replace("$n", Integer.toString(i))).exists());
 
 
-        return output;
+        return output.toArray(new String[0]);
     }
 
     public static String[][] split(String[] s, String separator) {
@@ -42,9 +44,20 @@ public class Tools {
         return output;
     }
 
+    public static int[] spitToInt(String s, String separator)
+    {
+        String[] split = s.split(separator);
+        int[] output = new int[split.length];
+        for(int i=0; i<s.length(); i++)
+        {
+            output[i] = Integer.parseInt(split[i]);
+        }
+        return output;
+    }
+
     public static String[] unifyEOL(String[] s) {
         for (int i = 0; i < s.length; i++)
-            s[i] = s[i].replace("\n\r", "\n").replace("\r", "\n");
+            s[i] = s[i].replace("\n\r", "\n").replace("\r\n", "\n").replace("\r", "\n");
 
         return s;
     }

@@ -3,7 +3,8 @@ package at.htlinn.ccc.Levels;
 public class Level2 extends Level
 {
     @Override
-    public String main(String[] input) {
+    public String main(String[] input)
+    {
         String output = "";
 
         //Transform file input into useful output!
