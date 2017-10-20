@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7ca33c5-91fb-41ce-99dc-f532bbe50aae" name="Default" comment="Added levelNr variable">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/level1/level1-1.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/level1/level1-2.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/level1/level1-3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/level1/level1-4.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/level1/level1-eg.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="a7ca33c5-91fb-41ce-99dc-f532bbe50aae" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/at/htlinn/ccc/Main.java" afterPath="$PROJECT_DIR$/src/at/htlinn/ccc/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/at/htlinn/ccc/Levels/Level1.java" afterPath="$PROJECT_DIR$/src/at/htlinn/ccc/Levels/Level1.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="19" column="63" lean-forward="false" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,12 +39,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level1.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Level1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Levels/Level1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="480">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -288,7 +284,7 @@
       <workItem from="1508313379252" duration="9032000" />
       <workItem from="1508396713570" duration="2724000" />
       <workItem from="1508421930760" duration="190000" />
-      <workItem from="1508486449800" duration="83000" />
+      <workItem from="1508486449800" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="Added some tools">
       <created>1508279719642</created>
@@ -325,11 +321,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508334148581</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added input">
+      <created>1508486541327</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1508486541327</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22534000" />
+    <option name="totallyTimeSpent" value="22824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -406,7 +409,8 @@
     <MESSAGE value="Extended compatibility" />
     <MESSAGE value="Added some tools and Level structure" />
     <MESSAGE value="Added levelNr variable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added levelNr variable" />
+    <MESSAGE value="Added input" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -439,7 +443,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -522,7 +528,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -594,7 +602,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,14 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Levels/Level1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -794,7 +796,17 @@
     <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="19" column="63" lean-forward="false" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/at/htlinn/ccc/Levels/Level1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
