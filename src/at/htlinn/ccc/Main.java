@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int levelNr = 1;
+        int levelNr = 2;
         String[][] input;
         Scanner sc = new Scanner(System.in);
         Level l = new Level(levelNr);
