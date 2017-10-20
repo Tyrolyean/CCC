@@ -60,7 +60,7 @@ public class Level2 extends Level
             output += poolIDs.get(j) + " ";
             double percent = pools.get(poolIDs.get(j)) *100.00 / allHashPower*1.00;
             percent = Tools.round(percent, 2);
-            output += Double.toString(percent) + " ";
+            output += String.format("%.2f ", percent);
         }
 
         for(int j=0; j<nodes.size(); j++)
@@ -68,7 +68,7 @@ public class Level2 extends Level
             output += nodeIDs.get(j) + " ";
             double percent = nodes.get(nodeIDs.get(j)) *100.00 / allHashPower*1.00;
             percent = Tools.round(percent, 2);
-            output += Double.toString(percent) + " ";
+            output += String.format("%.2f ", percent);
         }
 
         return output;
