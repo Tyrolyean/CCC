@@ -23,16 +23,20 @@ public class Level1 extends Level
         int allHashPower = 0;
 
         int i=0;
-        for(i=1; i<nodeNr;i++)
+        for(i=1; i<=nodeNr;i++)
         {
             String[] input_ = input[i].split(" ");
             nodes.put(input_[0], Integer.parseInt(input_[1]));
             allHashPower += Integer.parseInt(input_[1]);
         }
 
-        poolNr = Integer.parseInt(input[++i]);
+        poolNr = Integer.parseInt(input[i]);
 
-        while(i<i+poolNr)
+        i++;
+
+        int end = i+poolNr;
+
+        while(i<end)
         {
             String[] in = input[i].split(" ");
 
