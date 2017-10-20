@@ -11,7 +11,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Level l = new Level(levelNr);
 
-        Tools.levelFilePattern = "input.$n";
+        Tools.levelFilePattern = "level$l-$n.txt";
         Tools.levelPathPattern = "level$l";
         Tools.exampleNumber = "eg";
         Tools.firstInputNr = 1;
