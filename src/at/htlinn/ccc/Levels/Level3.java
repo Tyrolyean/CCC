@@ -6,6 +6,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Level3 extends Level {
+
+
+    ArrayList<Node> allNodes = new ArrayList<>();
+    ArrayList<Node> ways = new ArrayList<>();
+
+
+
     @Override
     public String main(String[] input) {
         Map<String, Double> nodes = new HashMap<>();
@@ -17,51 +24,118 @@ public class Level3 extends Level {
         ArrayList<String> poolIDs = new ArrayList<>();
         ArrayList<String> nodeIDs = new ArrayList<>();
 
-        double allHashPower = 0;
 
         int i = 0;
         for (i = 1; i <= nodeNr; i++) {
+
+
+            if(input[i].equalsIgnoreCase("0")){
+                i++;
+                break;
+            }
             String[] input_ = input[i].split(" ");
             nodes.put(input_[0], Double.parseDouble(input_[1]));
             nodeIDs.add(input_[0]);
             allHashPower += Integer.parseInt(input_[1]);
-        }
 
-        poolNr = Integer.parseInt(input[i]);
+            Node n = new Node(input_[0],Double.parseDouble(input_[1]));
+
+            allNodes.add(n);
+
+        }
 
         i++;
 
-        int end = i + poolNr;
+        for(;i <= input.length; i++){
 
-        while (i < end) {
-            String[] in = input[i].split(" ");
+            String[] input_ = input[i].split(" ");
 
-            double hashPower = 0;
-            for (int j = 1; j < in.length; j++) {
-                hashPower += nodes.get(in[j]);
+
+            Node n1;
+            Node n2;
+            for(Node n : allNodes) {
+                if(n.id.equalsIgnoreCase(input_[0])){
+                    n1 = n;
+                }else if( n.id.equalsIgnoreCase(input_[1])){
+                    n2 = n;
+                }
             }
 
-            pools.put(in[0], hashPower);
-            poolIDs.add(in[0]);
+            NodeConnection con = new NodeConnection(n1, n2, Double.parseDouble(input_[2]));
 
-            i++;
+            n1.addCon(n2, Double.parseDouble(input_[2]));
+            n2.addCon(n1, Double.parseDouble(input_[2]));
+
         }
 
-        ArrayList<NodeConnection> nodeConnections = new ArrayList<>();
 
-        while(i < input.length)
-        {
-            String[] in = input[i].split(" ");
-            nodeConnections.add(new NodeConnection(in[0], in[1], Double.parseDouble(in[2])));
+
+        for(Node n : allNodes){
+            for(NodeConnection con : n.conns){
+
+                ArrayList<NodeConnection> history = new ArrayList<>();
+                history.add(con);
+
+                testNode(con.nodeID2,con.latency,history);
+
+            }
         }
+
+
+
 
         return "";
     }
 
 
     @Override
-    public void setLevel(int levelNr)
-    {
+    public void setLevel(int levelNr) {
         throw new UnsupportedOperationException();
     }
+
+
+
+
+    String way = "";
+    ArrayList<double[]> sets = new ArrayList<>();
+
+
+
+    public void testNode(Node n, ArrayList<NodeConnection> history, double total_lat, int total_hashrate) {
+
+        if(total_hashrate >= (allHashPower / 2)){
+
+
+        }
+
+        double gesLatency = 0;
+        double gesHash = 0;
+
+        for (NodeConnection con : n.conns) {
+
+
+
+            if (!history.contains(n)) {
+                gesLatency += con.latency;
+                gesHash += con.nodeID1.hashRate;
+
+
+
+
+                double[] set = new double[2];
+                set[0] = con.latency;
+                set[1] = con.nodeID1.hashRate;
+
+                way += n.id + " ";
+                usedNodes.add(n);
+                sets.add(set);
+                testNode(con.nodeID2, );
+            }else{
+                return;
+            }
+
+        }
+
+    }
+
 }
