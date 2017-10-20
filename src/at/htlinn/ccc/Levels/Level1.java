@@ -3,6 +3,7 @@ package at.htlinn.ccc.Levels;
 import at.htlinn.ccc.Tools;
 import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.InternetHeaders;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,16 +13,47 @@ public class Level1 extends Level
     public String main(String[] input)
     {
         Map<String, Integer> nodes = new HashMap<>();
+        Map<String, Integer> pools = new HashMap<>();
 
         int nodeNr = Integer.parseInt(input[0]);
+        int poolNr;
 
-        for(int i=1; i<nodeNr;i++)
+        ArrayList<String> poolIDs = new ArrayList<>();
+
+        int allHashPower = 0;
+
+        int i=0;
+        for(i=1; i<nodeNr;i++)
         {
             String[] input_ = input[i].split(" ");
             nodes.put(input_[0], Integer.parseInt(input_[1]));
+            allHashPower += Integer.parseInt(input_[1]);
         }
 
-        //Transform file input into useful output!
+        poolNr = Integer.parseInt(input[++i]);
+
+        while(i<i+poolNr)
+        {
+            String[] in = input[i].split(" ");
+
+            int hashPower = 0;
+            for(int j=1;j<in.length;j++)
+            {
+                hashPower += nodes.get(in[j]);
+            }
+
+            pools.put(in[0], hashPower);
+            poolIDs.add(in[0]);
+
+            i++;
+        }
+
+        String output = Integer.toString(allHashPower) +" ";
+
+        for(i=0;i<pools.size();i++)
+        {
+            output += poolIDs.get(i) + " " + pools.get(poolIDs.get(i)) + " ";
+        }
 
         return output;
     }
